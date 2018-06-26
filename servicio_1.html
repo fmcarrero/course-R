@@ -1,0 +1,27 @@
+<h3>Resultado cotizante</h3>
+      <!--CARD PERSON-->
+      <div class="card shadow-sm mb-3">
+        <div class="card-header card-data-person">
+          <!-- Media middle -->
+          <div class="media mt-3">
+            <div class="icon-user d-inline p-2">
+              <img src="../../assets/images/icon-user-info.png" class="align-self-center mr-3" style="width:60px">
+            </div>
+            <div class="media-body">
+              <h4>{{result[0] + ' ' + result[1] + ' ' + result[2]}}</h4>
+              <p class="d-inline mr-4">{{result[3]}}
+                <b class="ml-2">{{result[4]}}</b>
+              </p>
+              <p class="d-inline">Fecha de nacimiento
+                <b class="ml-2">{{result[16]}}</b>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card-footer d-flex justify-content-center mt-0">
+          <h4>Clasificación segmento
+            <strong>{{result[22]}}</strong>
+          </h4>
+        </div>
+      </div>
