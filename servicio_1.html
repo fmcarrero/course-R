@@ -1,4 +1,9 @@
-<h3>Resultado cotizante</h3>
+<div *ngIf="result">
+     
+
+
+      <!--RESULTS-->
+      <h3>Resultado cotizante</h3>
       <!--CARD PERSON-->
       <div class="card shadow-sm mb-3">
         <div class="card-header card-data-person">
@@ -18,10 +23,114 @@
             </div>
           </div>
         </div>
-        
+        <div class="card-body">
+          <h2 class="card-title">Información demográfica</h2>
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-2">
+                <label for="yars">Edad</label>
+                <input type="text" class="form-control-plaintext" id="years" name='edad' [(ngModel)]="result[17]">
+              </div>
+              <div class="form-group col-md-2">
+                <label for="gender">Género</label>
+                <input type="text" readonly class="form-control-plaintext" id="gender" name='genero' [(ngModel)]="result[10]">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="ocupation">Ocupación</label>
+                <input type="text" readonly class="form-control-plaintext" id="ocupation" name='ocupacionAfilidado' [(ngModel)]="result[15]">
+              </div>
+              <div class="form-group col-md-2">
+                <label for="civilStatus">Estado civil</label>
+                <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[11]">
+              </div>
+            </div>
+          </form>
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-2">
+                <label for="birthdayData">Ciudad</label>
+                <input type="text" readonly class="form-control-plaintext" id="birthdayData" name='ciudad' [(ngModel)]="result[13]">
+              </div>
+              <div class="form-group col-md-2">
+                <label for="yars">Estrato</label>
+                <input type="email" readonly class="form-control-plaintext" id="years" name='estrato' [(ngModel)]="result[14]">
+              </div>
+              <div class="form-group col-md-8">
+                <label for="gender">Dirección</label>
+                <input type="text" readonly class="form-control-plaintext" id="gender" name='direccion' [(ngModel)]="result[12]">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!--WORKING INFORMATION-->
+      <div class="card shadow-sm mb-3">
+        <div class="card-body">
+          <h2 class="card-title">Información laboral</h2>
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="lastCompany">Última empresa en la que trabajo</label>
+                <input type="text" readonly class="form-control-plaintext" id="lastCompany" name='nombreUltimaEmpresa' [(ngModel)]="result[24]">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="lastDate">Fecha última planilla pagada</label>
+                <input type="text" readonly class="form-control-plaintext" id="lastDate" name='fechaUltimaPlanillaPaga' [(ngModel)]="result[23]">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="sector">Sector económico</label>
+                <input type="text" readonly class="form-control-plaintext" id="sector" value=".......">
+              </div>
+            </div>
+          </form>
+          <div class="table-responsive">
+            <table class="table table-bordered table-sm">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">Salario promedio</th>
+                  <th scope="col">Límite inferior</th>
+                  <th scope="col">Límite superior</th>
+                  <th scope="col">Proyección de crecimiento</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{ (+result[25] + +result[26])/2 }}</td>
+                  <td>{{result[25]}}</td>
+                  <td>{{result[26]}}</td>
+                  <td>{{ (+result[27]) *100 }}%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-blue shadow-sm mb-3">
+        <div class="card-body">
+          <h2 class="card-title">Información comercial</h2>
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="generation">Generación</label>
+                <input type="text" readonly class="form-control-plaintext" id="generation" name='generacion' [(ngModel)]="result[18]">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="paySegment">Segmento salarial</label>
+                <input type="text" readonly class="form-control-plaintext" id="paySegment" name='segmentoSalarial' [(ngModel)]="result[19]">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="rangeSegment">Segmento estrato</label>
+                <input type="text" readonly class="form-control-plaintext" id="rangeSegment" name='segmentoEstrato' [(ngModel)]="result[20]">
+              </div>
+            </div>
+          </form>
+        </div>
         <div class="card-footer d-flex justify-content-center mt-0">
           <h4>Clasificación segmento
             <strong>{{result[22]}}</strong>
           </h4>
         </div>
       </div>
+    </div>
