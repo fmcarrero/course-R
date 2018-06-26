@@ -1,136 +1,159 @@
-<div *ngIf="result">
-     
-
-
-      <!--RESULTS-->
-      <h3>Resultado cotizante</h3>
-      <!--CARD PERSON-->
-      <div class="card shadow-sm mb-3">
-        <div class="card-header card-data-person">
-          <!-- Media middle -->
-          <div class="media mt-3">
-            <div class="icon-user d-inline p-2">
-              <img src="../../assets/images/icon-user-info.png" class="align-self-center mr-3" style="width:60px">
-            </div>
-            <div class="media-body">
-              <h4>{{result[0] + ' ' + result[1] + ' ' + result[2]}}</h4>
-              <p class="d-inline mr-4">{{result[3]}}
-                <b class="ml-2">{{result[4]}}</b>
-              </p>
-              <p class="d-inline">Fecha de nacimiento
-                <b class="ml-2">{{result[16]}}</b>
-              </p>
-            </div>
+ <div *ngIf="result">
+        <div class="card-body">
+            <h2 class="card-title">Información</h2>
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-2">
+                  <label for="yars">Cluster salarial</label>
+                  <input type="text" class="form-control-plaintext" id="years" name='edad' [(ngModel)]="result[0]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="gender">Personas de Genero Femenino</label>
+                  <input type="text" readonly class="form-control-plaintext" id="gender" name='genero' [(ngModel)]="result[1]">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="ocupation">Personas de Genero Masculino</label>
+                  <input type="text" readonly class="form-control-plaintext" id="ocupation" name='ocupacionAfilidado' [(ngModel)]="result[2]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas de Estrato 1</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[3]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas de Estrato 2</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[4]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas de Estrato 3</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[5]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas de Estrato 4</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[6]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas de Estrato 5</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[7]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas de Estrato 6</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[8]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Salario Promedio del cluster salarial</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[9]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas Independientes</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[10]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas Estudiantes</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[11]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas Amas de casa</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[12]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas Empleados-socio</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[13]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas rentistas</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[14]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Otros</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[15]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas Empleados</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[16]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas Pensionados</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[17]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas Menores no estudiantes</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[18]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas Generación X</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[19]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas Posmillenial</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[20]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas Millenial</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[21]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas Babyboomer</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[22]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas Platino</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[23]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas Plata</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[24]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas Bronce</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[25]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas Oro</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[26]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas Union Libre</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[27]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas Solteros</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[28]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas Casados</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[29]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas Separados</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[30]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas Divorciados</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[31]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas Viudos</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[32]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Personas Religiosos</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[33]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Límite inferior salario predecido</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[34]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Limite superior salario predecido</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[35]">
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="civilStatus">Incremento salarial predecido</label>
+                  <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[36]">
+                </div>
+              </div>
+            </form>
+            
           </div>
-        </div>
-        <div class="card-body">
-          <h2 class="card-title">Información demográfica</h2>
-          <form>
-            <div class="form-row">
-              <div class="form-group col-md-2">
-                <label for="yars">Edad</label>
-                <input type="text" class="form-control-plaintext" id="years" name='edad' [(ngModel)]="result[17]">
-              </div>
-              <div class="form-group col-md-2">
-                <label for="gender">Género</label>
-                <input type="text" readonly class="form-control-plaintext" id="gender" name='genero' [(ngModel)]="result[10]">
-              </div>
-              <div class="form-group col-md-6">
-                <label for="ocupation">Ocupación</label>
-                <input type="text" readonly class="form-control-plaintext" id="ocupation" name='ocupacionAfilidado' [(ngModel)]="result[15]">
-              </div>
-              <div class="form-group col-md-2">
-                <label for="civilStatus">Estado civil</label>
-                <input type="text" readonly class="form-control-plaintext" id="civilStatus" name='estadoCivil' [(ngModel)]="result[11]">
-              </div>
-            </div>
-          </form>
-          <form>
-            <div class="form-row">
-              <div class="form-group col-md-2">
-                <label for="birthdayData">Ciudad</label>
-                <input type="text" readonly class="form-control-plaintext" id="birthdayData" name='ciudad' [(ngModel)]="result[13]">
-              </div>
-              <div class="form-group col-md-2">
-                <label for="yars">Estrato</label>
-                <input type="email" readonly class="form-control-plaintext" id="years" name='estrato' [(ngModel)]="result[14]">
-              </div>
-              <div class="form-group col-md-8">
-                <label for="gender">Dirección</label>
-                <input type="text" readonly class="form-control-plaintext" id="gender" name='direccion' [(ngModel)]="result[12]">
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <!--WORKING INFORMATION-->
-      <div class="card shadow-sm mb-3">
-        <div class="card-body">
-          <h2 class="card-title">Información laboral</h2>
-          <form>
-            <div class="form-row">
-              <div class="form-group col-md-4">
-                <label for="lastCompany">Última empresa en la que trabajo</label>
-                <input type="text" readonly class="form-control-plaintext" id="lastCompany" name='nombreUltimaEmpresa' [(ngModel)]="result[24]">
-              </div>
-              <div class="form-group col-md-4">
-                <label for="lastDate">Fecha última planilla pagada</label>
-                <input type="text" readonly class="form-control-plaintext" id="lastDate" name='fechaUltimaPlanillaPaga' [(ngModel)]="result[23]">
-              </div>
-              <div class="form-group col-md-4">
-                <label for="sector">Sector económico</label>
-                <input type="text" readonly class="form-control-plaintext" id="sector" value=".......">
-              </div>
-            </div>
-          </form>
-          <div class="table-responsive">
-            <table class="table table-bordered table-sm">
-              <thead class="thead-light">
-                <tr>
-                  <th scope="col">Salario promedio</th>
-                  <th scope="col">Límite inferior</th>
-                  <th scope="col">Límite superior</th>
-                  <th scope="col">Proyección de crecimiento</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>{{ (+result[25] + +result[26])/2 }}</td>
-                  <td>{{result[25]}}</td>
-                  <td>{{result[26]}}</td>
-                  <td>{{ (+result[27]) *100 }}%</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div class="card bg-blue shadow-sm mb-3">
-        <div class="card-body">
-          <h2 class="card-title">Información comercial</h2>
-          <form>
-            <div class="form-row">
-              <div class="form-group col-md-4">
-                <label for="generation">Generación</label>
-                <input type="text" readonly class="form-control-plaintext" id="generation" name='generacion' [(ngModel)]="result[18]">
-              </div>
-              <div class="form-group col-md-4">
-                <label for="paySegment">Segmento salarial</label>
-                <input type="text" readonly class="form-control-plaintext" id="paySegment" name='segmentoSalarial' [(ngModel)]="result[19]">
-              </div>
-              <div class="form-group col-md-4">
-                <label for="rangeSegment">Segmento estrato</label>
-                <input type="text" readonly class="form-control-plaintext" id="rangeSegment" name='segmentoEstrato' [(ngModel)]="result[20]">
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="card-footer d-flex justify-content-center mt-0">
-          <h4>Clasificación segmento
-            <strong>{{result[22]}}</strong>
-          </h4>
-        </div>
-      </div>
+       
     </div>
